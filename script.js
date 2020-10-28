@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name	Retroogle
-// @version	1.0
+// @version	1.0.1
 // @description	Revert Google product icons to their pre-2020 style.
 // @author	Xing <dev@x-ing.space> (https://x-ing.space)
 // @license	MIT License
