@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name	Retroogle
-// @version	1.0.3
+// @version	1.0.4
 // @description	Revert Google product icons to their pre-2020 style.
 // @author	Xing <dev@x-ing.space> (https://x-ing.space)
 // @license	MIT License
@@ -12,6 +12,7 @@
 (function(){
 
 	const loc = window.location
+	let key = false
 	switch(loc.hostname.split('.')[0]){
 		case 'meet':
 			key='meet'
@@ -36,6 +37,8 @@
 			*/
 	}
 
+	if(!key) return
+	
 	const fav = document.createElement('link')
 	fav.type='image/png'
 	fav.rel='shortcut icon'
