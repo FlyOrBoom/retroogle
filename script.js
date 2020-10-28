@@ -11,22 +11,29 @@
 
 (function(){
 
-	const fav_urls = {
-		meet:	'https://x-ing.space/retroogle/icons/meet.png'
-	}
-
-	let key
-
-	switch(window.location.hostname){
-	case 'meet.google.com':
-		key='meet'
-		break
+	const loc = window.location
+	switch(loc.hostname){
+		case 'meet.google.com':
+			key='meet'
+			break
+			/*
+		case 'docs.google.com':
+			switch(loc.pathname.split('/')[1]){
+				case 'presentation':
+					key='slides'
+					break
+				case 'document':
+					key='docs'
+					break
+			}
+			break	
+			*/
 	}
 
 	const fav = document.createElement('link')
 	fav.type='image/png'
 	fav.rel='shortcut icon'
-	fav.href = fav_urls[key]
+	fav.href = `https://x-ing.space/retroogle/icons/${key}.png`
 	document.head.append(fav)
 	
 })()
