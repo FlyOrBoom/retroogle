@@ -12,12 +12,15 @@
 (function(){
 
 	const loc = window.location
-	switch(loc.hostname){
-		case 'meet.google.com':
+	switch(loc.hostname.split('.')){
+		case 'meet':
 			key='meet'
 			break
+		case 'drive':
+			key='drive'
+			break
 			/*
-		case 'docs.google.com':
+		case 'docs':
 			switch(loc.pathname.split('/')[1]){
 				case 'presentation':
 					key='slides'
